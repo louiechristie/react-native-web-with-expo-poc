@@ -1,7 +1,9 @@
 {
   "name": "newcrossities",
   "version": "0.0.1",
-  "keywords": "newcrossities",
+  "keywords": [
+    "newcrossities"
+  ],
   "homepage": "https://github.com/louiechristie/newcrossities",
   "bugs": "https://github.com/louiechristie/newcrossities/issues",
   "main": "node_modules/expo/AppEntry.js",
@@ -11,10 +13,14 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "eject": "expo eject",
-    "test": "node ./node_modules/jest/bin/jest.js --watchAll"
+    "test": "node ./node_modules/jest/bin/jest.js --watchAll",
+    "lint": "node ./node_modules/eslint/bin/eslint.js . --ext js,jsx --ignore-pattern node_modules/"
   },
   "jest": {
     "preset": "jest-expo"
+  },
+  "eslintConfig": {
+    "extends": "universe/native"
   },
   "dependencies": {
     "@expo/samples": "2.1.1",
@@ -25,6 +31,11 @@
   },
   "devDependencies": {
     "babel-preset-expo": "^5.0.0",
-    "jest-expo": "^31.0.0"
+    "eslint": "^5.9.0",
+    "eslint-config-universe": "^1.0.7",
+    "eslint-plugin-react": "^7.11.1",
+    "eslint-plugin-react-native": "^3.5.0",
+    "jest-expo": "^31.0.0",
+    "prettier": "^1.15.3"
   }
 }
