@@ -2,6 +2,7 @@ import React from 'react';
 import { ScrollView, StyleSheet, Text } from 'react-native';
 
 export default class LinksScreen extends React.Component {
+  static path = 'links';
   static navigationOptions = {
     title: 'Links',
   };

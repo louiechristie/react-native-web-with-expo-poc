@@ -14,13 +14,12 @@
     "ios": "expo start --ios",
     "eject": "expo eject",
     "test": "node ./node_modules/jest/bin/jest.js --watchAll",
-    "lint": "node ./node_modules/eslint/bin/eslint.js . --ext js,jsx --ignore-pattern node_modules/"
+    "lint": "node ./node_modules/eslint/bin/eslint.js . --ext js,jsx --ignore-pattern node_modules/",
+    "start-web": "react-scripts start",
+    "build-web": "react-scripts build"
   },
   "jest": {
     "preset": "jest-expo"
-  },
-  "eslintConfig": {
-    "extends": "universe/native"
   },
   "husky": {
     "hooks": {
@@ -37,14 +36,21 @@
   },
   "dependencies": {
     "@expo/samples": "2.1.1",
+    "@react-navigation/core": "^3.0.1",
+    "@react-navigation/web": "^1.0.0-alpha.7",
     "expo": "^31.0.2",
     "react": "16.5.0",
+    "react-art": "^16.6.3",
+    "react-dom": "^16.6.3",
     "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.0.tar.gz",
-    "react-navigation": "^2.18.2"
+    "react-native-web": "^0.9.8",
+    "react-navigation": "3.0.5",
+    "react-scripts": "^2.1.1"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.2.1",
     "babel-preset-expo": "^5.0.0",
-    "eslint": "^5.9.0",
+    "eslint": "5.6.0",
     "eslint-config-universe": "^1.0.7",
     "eslint-plugin-react": "^7.11.1",
     "eslint-plugin-react-native": "^3.5.0",
@@ -52,5 +58,11 @@
     "jest-expo": "^31.0.0",
     "lint-staged": "^8.1.0",
     "prettier": "^1.15.3"
-  }
+  },
+  "browserslist": [
+    ">1%",
+    "not dead",
+    "not ie <= 11",
+    "not Safari <7"
+  ]
 }

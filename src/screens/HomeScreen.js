@@ -1,12 +1,16 @@
 import React from 'react';
-import { Platform, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Platform, ScrollView, StyleSheet, Text, View, Button } from 'react-native';
 
 export default class HomeScreen extends React.Component {
+  static path = '';
   static navigationOptions = {
     header: null,
+    title: 'Home',
   };
 
   render() {
+    const { navigate } = this.props.navigation;
+
     return (
       <View style={styles.container}>
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
@@ -20,6 +24,8 @@ export default class HomeScreen extends React.Component {
             <Text>* Underground, weird and funny</Text>
 
             <Text>* Completely incomplete</Text>
+
+            <Button onPress={() => navigate('Links')} title="Links" />
           </View>
         </ScrollView>
       </View>

@@ -1,0 +1,7 @@
+{
+  "extends": ["universe/native", "universe/web"],
+  "env": {
+    "browser": true
+  },
+  "plugins": ["react", "react-native"]
+}
